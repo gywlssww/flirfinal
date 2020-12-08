@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <!-- Title  -->
+
+    <!-- Show SDK version  -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="connect 전 disconnect을 하시면 안됩니다."
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/sdk_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sdk_version_text"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="391dp">
+
+        <ImageView
+            android:id="@+id/msx_image"
+            android:layout_width="196dp"
+            android:layout_height="389dp"
+            android:contentDescription="image with IR and visual data mixed"
+            android:maxWidth="50dp"
+            android:minWidth="50dp" />
+
+        <ImageView
+            android:id="@+id/photo_image"
+            android:layout_width="196dp"
+            android:layout_height="389dp"
+            android:contentDescription="image with only visual image"
+            android:maxWidth="50dp"
+            android:minWidth="50dp" />
+    </LinearLayout>
+
+    <!-- Start / Stop discovery buttons.
+         and Connect to FLIR ONE / Emulators buttons  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/start_discovery"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#F4DF22"
+            android:onClick="startDiscovery"
+            android:layout_marginRight="2dp"
+
+            android:text="connect" />
+
+        <Button
+            android:id="@+id/stop_discovery"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#F4C127"
+            android:layout_marginRight="2dp"
+            android:onClick="stopDiscovery"
+            android:text="DISCONNECT" />
+
+        <Button
+            android:id="@+id/change_mode"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="open_activity_changeMode"
+            android:backgroundTint="#F3A83B"
+
+            android:text="Fusion Mode" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connection_status_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connection_status_text"
+        android:textSize="18dp"/>
+
+    <!-- extra data about the discovery-->
+    <TextView
+        android:id="@+id/discovery_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/discovery_status_text"
+        android:textSize="0sp" />
+    <!-- -->
+
+    <ImageView
+        android:id="@+id/photo_image_saved"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="saved image with only visual image"
+        android:maxWidth="50dp"
+        android:minWidth="50dp" />
+
+    <Button
+        android:id="@+id/saveImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="saveImage"
+        android:backgroundTint="#FBCD41"
+
+        android:text="save image" />
+
+
+
+
+</LinearLayout>
